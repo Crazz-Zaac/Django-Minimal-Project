@@ -1,5 +1,5 @@
 from django.contrib import admin
 
-from ads.models import Ad
+from ads.models import Ad, Comment
 
-admin.site.register(Ad)
+admin.site.register([Ad, Comment])
