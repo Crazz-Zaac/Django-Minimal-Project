@@ -21,7 +21,6 @@ class Ad(models.Model):
 	updated_at = models.DateTimeField(auto_now=True)
 
 	comments = models.ManyToManyField(settings.AUTH_USER_MODEL, through='Comment', related_name='comments_owned')
-
 	#show up in the admin list
 	def __str__(self):
 		return self.title
