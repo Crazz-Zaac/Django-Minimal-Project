@@ -24,14 +24,14 @@ from django.views.static import serve
 
 urlpatterns = [
     # path('', TemplateView.as_view(template_name='home/main.html')),
-    path('', include('home.urls')),
+    # path('', include('home.urls')),
+    path('', include('ads.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('autos/', include('autos.urls')),
     path('hello/', include('hello.urls')),
     path('polls/', include('polls.urls')),
     path('cats/', include('cats.urls')),
-    path('ads/', include('ads.urls')),
     url(r'^oauth/', include('social_django.urls', namespace='social')),
 ]
 
